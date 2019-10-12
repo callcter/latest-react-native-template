@@ -26,6 +26,9 @@ global.Color = Color;
 global.Api = Api;
 global.rem = Adapter.REM;
 
+global.showToast = (msg) => {
+  Utils._log(msg)
+}
 global._ = _;
 global.NP = NP;
 require('moment/locale/zh-cn');

@@ -16,11 +16,13 @@ module.exports = {
     "ecmaVersion": 6
   },
   globals: {
+    require: true,
     PropTypes: true,
     Adapter: true,
     Color: true,
     Api: true,
     rem: true,
+    showToast: true,
     _: true,
     NP: true,
     user: true,
