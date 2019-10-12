@@ -1,33 +1,38 @@
-import React from 'react'
+import React from 'react';
 import {
   View,
-  StyleSheet
-} from 'react-native'
-import PropTypes from 'prop-types'
+  StyleSheet,
+} from 'react-native';
 
-//竖线
-export default VerticalLine = (props) => {
-  
+// 竖线
+const VerticalLine = (props) => {
   const {
-    height = null,
-    color = Color.l_high,
-    width = StyleSheet.hairlineWidth,
-    style = null
-  } = props
+    height, style, color, width,
+  } = props;
 
   const lineStyle = [{
-    width: width,
+    width,
     backgroundColor: color,
-    height: height ? height : 'auto'
-  }, style]
-  
-  if(!height) lineStyle.push({flex: 1})
+    height: height || 'auto',
+  }, style];
 
-  return <View style={lineStyle} />
-}
+  if (!height) lineStyle.push({ flex: 1 });
+
+  return <View style={lineStyle} />;
+};
 
 VerticalLine.propTypes = {
   height: PropTypes.number,
-  color: PropTypes.oneOfType([PropTypes.string,PropTypes.object]),
-  width: PropTypes.number
+  color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  width: PropTypes.number,
+  style: PropTypes.object,
 }
+
+VerticalLine.defaultProps = {
+  height: null,
+  style: null,
+  color: Color.l_high,
+  width: StyleSheet.hairlineWidth,
+}
+
+export default VerticalLine

@@ -1,16 +1,16 @@
-import { 
-  MODAL_SHOW, 
-  MODAL_HIDE, 
+import {
+  MODAL_SHOW,
+  MODAL_HIDE,
   MODAL_RESET,
-  MODAL_UPDATE
-} from '../actions/type'
+  MODAL_UPDATE,
+} from '../actions/type';
 
 
 const initialState = {
-  modalList: []
-}
+  modalList: [],
+};
 
-const initialZIndex = 100
+const initialZIndex = 100;
 
 const initialData = {
   name: '',
@@ -18,7 +18,7 @@ const initialData = {
   animDuration: 300,
   zIndex: initialZIndex,
   onPressMask: null,
-  type: 'center', //'top','right','bottom','left','center','full' 六种类型的弹窗
+  type: 'center', // 'top','right','bottom','left','center','full' 六种类型的弹窗
   width: '80%',
   height: null,
   space: null,
@@ -26,15 +26,17 @@ const initialData = {
   contentComponent: null,
   afterHide: null,
   afterShow: null,
-  resetAfterHide: true
-}
+  resetAfterHide: true,
+};
 
 const modalReducer = (state = initialState, action) => {
-  switch(action.type){
+  switch (action.type) {
     case MODAL_SHOW:
-      const newData = Object.assign({}, {...initialData}, action.data, {show: true, zIndex: initialZIndex + state.modalList.length})
-      state.modalList.push(newData)
-      return Object.assign({}, {...state})
+      const newData = {
+        ...initialData, ...action.data, show: true, zIndex: initialZIndex + state.modalList.length,
+      };
+      state.modalList.push(newData);
+      return { ...state };
     case MODAL_HIDE:
       /*
       var index1 = _.findIndex(state.modalList,(item)=>{
@@ -45,31 +47,27 @@ const modalReducer = (state = initialState, action) => {
         var mod1 = Object.assign({},{...tem1[index1]},{show:false})
         tem1.splice(index1,1,mod1)
       }
-      return Object.assign({}, {modalList:tem1})*/
-      _.map(state.modalList, (item)=>{
-        if(item.name === action.data.name) {
-          item.show = false
+      return Object.assign({}, {modalList:tem1}) */
+      _.map(state.modalList, (item) => {
+        if (item.name === action.data.name) {
+          item.show = false;
         }
-      })
-      return Object.assign({}, {...state})
+      });
+      return { ...state };
     case MODAL_UPDATE:
-      var index = _.findIndex(state.modalList,(item)=>{
-        return item.name==action.data.name
-      })
-      if(index>=0){
-        var tem = [...state.modalList]
-        var mod = Object.assign({},{...tem[index]},{...action.data})
-        tem.splice(index,1,mod)
+      var index = _.findIndex(state.modalList, (item) => item.name == action.data.name);
+      if (index >= 0) {
+        var tem = [...state.modalList];
+        const mod = { ...tem[index], ...action.data };
+        tem.splice(index, 1, mod);
       }
-      return Object.assign({}, {modalList:tem})
+      return { modalList: tem };
     case MODAL_RESET:
-      _.remove(state.modalList, (item)=>{
-        return !item.show
-      })
-      return Object.assign({}, {...state})
+      _.remove(state.modalList, (item) => !item.show);
+      return { ...state };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default modalReducer
+export default modalReducer;

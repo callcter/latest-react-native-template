@@ -1,36 +1,26 @@
-import {
-  ALERT_SHOW,
-  ALERT_HIDE,
-  ALERT_RESET
-} from './type'
+import { ALERT_SHOW, ALERT_HIDE, ALERT_RESET } from './type';
 
-function alertShow(alertData) {
+export function alertShow(alertData) {
   return (dispatch) => {
     dispatch({
       type: ALERT_SHOW,
-      data: alertData
-    })
-  }
+      data: alertData,
+    });
+  };
 }
 
-function alertHide() {
+export function alertHide() {
   return (dispatch) => {
     dispatch({
-      type: ALERT_HIDE
-    })
-  }
+      type: ALERT_HIDE,
+    });
+  };
 }
 
-function alertReset() {
+export function alertReset() {
   return (dispatch) => {
     dispatch({
-      type: ALERT_RESET
-    })
-  }
-}
-
-export {
-  alertShow,
-  alertHide,
-  alertReset
+      type: ALERT_RESET,
+    });
+  };
 }

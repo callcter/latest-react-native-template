@@ -40,6 +40,7 @@ npm i react-navigation react-navigation-redux-helpers react-native-gesture-handl
 #### 基本功能性组件
 
 ```shell
+# prop-types  类型检查
 # react-native-code-push  热更新
 # react-native-device-info  设备信息
 # react-native-exception-handler  异常捕捉处理
@@ -53,7 +54,7 @@ npm i react-navigation react-navigation-redux-helpers react-native-gesture-handl
 # react-native-vector-icons  图标
 # react-native-keyboard-spacer  键盘处理
 
-npm i react-native-code-push react-native-device-info react-native-exception-handler react-native-extra-dimensions-android react-native-popup-menu react-native-snap-carousel react-native-splash-screen react-native-status-bar-height react-native-storage react-native-tab-view react-native-vector-icons
+npm i prop-types react-native-code-push react-native-device-info react-native-exception-handler react-native-extra-dimensions-android react-native-popup-menu react-native-snap-carousel react-native-splash-screen react-native-status-bar-height react-native-storage react-native-tab-view react-native-vector-icons
 ```
 
 #### 辅助性插件
@@ -62,6 +63,7 @@ npm i react-native-code-push react-native-device-info react-native-exception-han
 # lodash  函数库
 # number-precision  处理 parseFloat 等导致的精度问题
 # moment  时间格式化
+# path-parser 路径处理
 
-npm i lodash number-precision moment
+npm i lodash number-precision moment path-parser
 ```

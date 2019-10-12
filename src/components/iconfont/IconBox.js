@@ -1,16 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Iconfont from './index';
 
-import Iconfont from './index'
+// 规范字体图标的size、宽高、行高，方便对齐
 
-//规范字体图标的size、宽高、行高，方便对齐
-export default class IconBox extends Component {
-  render() {
-    const iconStyle=[{
-      width: this.props.size,
-      height: this.props.size,
-      lineHeight: this.props.size
-    }, this.props.iconStyle, this.props.style]
-    
-    return <Iconfont name={this.props.name} size={this.props.size} style={iconStyle} color={this.props.color} selectable={false} />
-  }
+export default (props) => {
+  const {
+    name, size, color, iconStyle, style,
+  } = props
+  const iconStyleTemp = [{
+    width: size,
+    height: size,
+    lineHeight: size,
+  }, iconStyle, style];
+  return (
+    <Iconfont name={name} size={size} style={iconStyleTemp} color={color} selectable={false} />
+  )
 }

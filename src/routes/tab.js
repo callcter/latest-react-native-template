@@ -1,13 +1,13 @@
-import { createBottomTabNavigator } from 'react-navigation-tabs'
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import News from '../containers/news'
-import User from '../containers/user'
+import News from '../containers/news';
+import User from '../containers/user';
 
-export default Tab = createBottomTabNavigator({
+export default createBottomTabNavigator({
   News: {
-    screen: News
+    screen: News,
   },
   User: {
-    screen: User
-  }
-})
+    screen: User,
+  },
+});

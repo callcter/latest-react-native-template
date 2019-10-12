@@ -1,14 +1,14 @@
-import { createStackNavigator } from 'react-navigation-stack'
+import { createStackNavigator } from 'react-navigation-stack';
 
-import Tab from './tab'
+import Tab from './tab';
 
-export default AppStack = createStackNavigator({
+export default createStackNavigator({
   Tab: {
     screen: Tab,
     navigationOptions: {
-      header: null
-    }
-  }
+      header: null,
+    },
+  },
 }, {
-  headerMode: 'none'
-})
+  headerMode: 'none',
+});

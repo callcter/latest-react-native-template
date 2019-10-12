@@ -1,4 +1,4 @@
-import { ALERT_SHOW, ALERT_HIDE, ALERT_RESET } from '../actions/type'
+import { ALERT_SHOW, ALERT_HIDE, ALERT_RESET } from '../actions/type';
 
 const initialState = {
   show: false,
@@ -8,20 +8,20 @@ const initialState = {
   title: '提示',
   content: '',
   contentComponent: null,
-  btns: []
-}
+  btns: [],
+};
 
 const alertReducer = (state = initialState, action) => {
-  switch(action.type){
+  switch (action.type) {
     case ALERT_SHOW:
-      return Object.assign({},{...state},{show: true}, action.data)
+      return { ...state, show: true, ...action.data };
     case ALERT_HIDE:
-      return Object.assign({},{...state},{show: false})
+      return { ...state, show: false };
     case ALERT_RESET:
-      return Object.assign({},{...initialState})
+      return { ...initialState };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default alertReducer
+export default alertReducer;

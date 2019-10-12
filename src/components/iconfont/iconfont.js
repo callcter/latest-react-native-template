@@ -1,12 +1,11 @@
-import { createIconSet } from 'react-native-vector-icons'
-import glyphMap from './iconfont.json'
+import { createIconSet } from 'react-native-vector-icons';
+import glyphMap from './iconfont.json';
 
-const iconSet = createIconSet(glyphMap, 'iconfont', 'iconfont.ttf')
+const iconSet = createIconSet(glyphMap, 'iconfont', 'iconfont.ttf');
 
-export default iconSet
+export default iconSet;
 
-export const Button = iconSet.Button
-export const TabBarItem = iconSet.TabBarItem
-export const TabBarItemIOS = iconSet.TabBarItemIOS
-export const ToolbarAndroid = iconSet.ToolbarAndroid
-export const getImageSource = iconSet.getImageSourcess
+export const {
+  Button, TabBarItem, TabBarItemIOS, ToolbarAndroid,
+} = iconSet;
+export const getImageSource = iconSet.getImageSourcess;

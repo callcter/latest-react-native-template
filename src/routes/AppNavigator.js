@@ -1,24 +1,24 @@
-import { createSwitchNavigator } from 'react-navigation'
+import { createSwitchNavigator } from 'react-navigation';
 
-import LoadingScreen from '../containers/loadingScreen'
-import BootScreen from '../containers/bootScreen'
-import AppStack from './AppStack'
-import AuthStack from './AuthStack'
+import LoadingScreen from '../containers/loadingScreen';
+import BootScreen from '../containers/bootScreen';
+import AppStack from './AppStack';
+import AuthStack from './AuthStack';
 
 export default createSwitchNavigator({
   Loading: {
-    screen: LoadingScreen
+    screen: LoadingScreen,
   },
   Boot: {
-    screen: BootScreen
+    screen: BootScreen,
   },
   App: {
-    screen: AppStack
+    screen: AppStack,
   },
   Auth: {
-    screen: AuthStack
-  } 
+    screen: AuthStack,
+  },
 }, {
   initialRouteName: 'Loading',
-  resetOnBlur: true
-})
+  resetOnBlur: true,
+});

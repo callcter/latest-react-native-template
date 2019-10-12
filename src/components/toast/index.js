@@ -1,3 +1,3 @@
-import Toast from './toastUI'
+import Toast from './toastUI';
 
-export default Toast
+export default Toast;

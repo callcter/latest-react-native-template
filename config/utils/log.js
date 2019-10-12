@@ -1,31 +1,64 @@
-import RNFetchBlob from 'rn-fetch-blob'
-import Api from '../api'
+import RNFetchBlob from 'rn-fetch-blob';
+import Api from '../api';
 
-const WwwApiPath = Api.WwwApiPath
+const { WwwApiPath } = Api;
 
-export function createLog(entry){
-  entry = Object.assign(entry, {
+function uploadLogs(logs, filePath) {
+  _log(logs);
+  _fetch(`${WwwApiPath}/log_modules`, {
+    method: 'post',
+    body: JSON.stringify({ logs }),
+  }).then(() => {
+    storage.remove({
+      key: 'log',
+    });
+    if (filePath) {
+      RNFetchBlob.fs.unlink(filePath).catch(() => {});
+    }
+  });
+}
+
+function abortedLog(ret) {
+  const lastOne = ret[ret.length - 1];
+  const filePath = `${RNFetchBlob.fs.dirs.DocumentDir}/temp_log.txt`;
+  RNFetchBlob.fs.readFile(filePath).then((res) => {
+    _log(res);
+    const abortLog = {
+      ...lastOne,
+      action: 'close',
+      timestamp: res,
+    };
+    ret.push(abortLog);
+    uploadLogs(ret, filePath);
+  }).catch((err) => {
+    _log(err);
+    uploadLogs(ret);
+  });
+}
+
+export function createLog(entry) {
+  const entryTemp = Object.assign(entry, {
     platform: Adapter.isIOS ? 'ios' : 'android',
     timestamp: new Date().getTime().toString(),
-    uid: !!user && user.id ? user.id : ''
-  })
+    uid: !!user && user.id ? user.id : '',
+  });
   storage.load({
-    key: 'log'
-  }).then(ret => {
-    let data = [].concat(ret)
-    data.push(entry)
+    key: 'log',
+  }).then((ret) => {
+    const data = [].concat(ret);
+    data.push(entryTemp);
     storage.save({
       key: 'log',
-      data: data
-    }).catch(()=>{})
-  }).catch(()=>{
-    let data = []
-    data.push(entry)
+      data,
+    }).catch(() => {});
+  }).catch(() => {
+    const data = [];
+    data.push(entryTemp);
     storage.save({
       key: 'log',
-      data: data
-    }).catch(()=>{})
-  })
+      data,
+    }).catch(() => {});
+  });
 }
 
 /**
@@ -33,55 +66,23 @@ export function createLog(entry){
  *
  * @export
  */
-export function initLogs(){
+export function initLogs() {
   storage.load({
-    key: 'log'
-  }).then(ret => {
-    if(ret.length > 0){
-      let last_one = ret[ret.length -1]
-      if(last_one.type === 'statistics' && last_one.action === 'open'){
-        abortedLog(ret)
-      }else{
-        uploadLogs(ret)
+    key: 'log',
+  }).then((ret) => {
+    if (ret.length > 0) {
+      const lastOne = ret[ret.length - 1];
+      if (lastOne.type === 'statistics' && lastOne.action === 'open') {
+        abortedLog(ret);
+      } else {
+        uploadLogs(ret);
       }
     }
-  }).catch(err => {
-    _log(err)
+  }).catch((err) => {
+    _log(err);
     storage.save({
       key: 'log',
-      data: []
-    }).catch(()=>{})
-  })
-}
-
-function uploadLogs(logs, filePath){
-  _log(logs)
-  fetchPro(`${WwwApiPath}/log_modules`, {
-    method: 'post',
-    body: JSON.stringify({logs: logs})
-  }).then(resJson => {
-    storage.remove({
-      key: 'log'
-    })
-    if(filePath){
-      RNFetchBlob.fs.unlink(filePath).catch(()=>{})
-    }
-  })
-}
-
-function abortedLog(ret){
-  let last_one = ret[ret.length -1]
-  let filePath = `${RNFetchBlob.fs.dirs.DocumentDir}/temp_log.txt`
-  RNFetchBlob.fs.readFile(filePath).then(res => {
-    _log(res)
-    let abort_log = Object.assign({}, last_one, {
-      action: 'close',
-      timestamp: res
-    })
-    ret.push(abort_log)
-    uploadLogs(ret, filePath)
-  }).catch(err => {
-    _log(err)
-    uploadLogs(ret)
-  })
+      data: [],
+    }).catch(() => {});
+  });
 }
