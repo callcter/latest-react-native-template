@@ -1,6 +1,6 @@
 # latest-react-native-template
 
-最新的 React Native 项目模板，当前为 0.61.1，使用组件都是最新的
+最新的 React Native 项目模板，当前为 0.61.2，使用组件都是最新的
 
 # 详细介绍
 
