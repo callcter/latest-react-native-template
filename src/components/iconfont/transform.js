@@ -1,6 +1,7 @@
-const fs = require('fs');
+const fs = require('fs')
+const path = require('path')
 
-const rs = fs.createReadStream('iconfont.txt');
+const rs = fs.createReadStream(path.join(__dirname, 'iconfont.txt'));
 rs.setEncoding('utf8');
 rs.on('data', (chunk) => {
   const chunkTemp = chunk.replace(/\n|\r|\t/g, '');
@@ -16,5 +17,5 @@ rs.on('data', (chunk) => {
     const str22 = str2.replace(/"/, '').replace(/\\/, '').replace(/";/, '');
     result[str11] = parseInt(str22, 16);
   }
-  fs.writeFileSync('iconfont.json', JSON.stringify(result, null, 2), 'utf8');
+  fs.writeFileSync(path.join(__dirname, 'iconfont.json'), JSON.stringify(result, null, 2), 'utf8');
 });

@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build-icons": "node ./src/components/iconfont/transform.js"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.2",

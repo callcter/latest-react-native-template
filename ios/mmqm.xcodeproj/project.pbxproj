@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2403ADE62354258C004BC262 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2403ADE52354258C004BC262 /* logo.jpg */; };
 		24230673235401AA00245B20 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24230672235401AA00245B20 /* Launch Screen.storyboard */; };
+		24C4CBBE2354766000264AAC /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24C4CBBD2354766000264AAC /* iconfont.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -55,6 +56,7 @@
 		1462AB55A248851ECEE50B87 /* Pods-mmqm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm.release.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm/Pods-mmqm.release.xcconfig"; sourceTree = "<group>"; };
 		2403ADE52354258C004BC262 /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		24230672235401AA00245B20 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		24C4CBBD2354766000264AAC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* mmqm-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mmqm-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* mmqm-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mmqm-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC730E53BAB4BD356366BC9 /* Pods-mmqm-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm-tvOSTests/Pods-mmqm-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		0D3F6AB5B9FB4676920F8E1A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				24C4CBBD2354766000264AAC /* iconfont.ttf */,
 				2403ADE52354258C004BC262 /* logo.jpg */,
 			);
 			name = Resources;
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C4CBBE2354766000264AAC /* iconfont.ttf in Resources */,
 				24230673235401AA00245B20 /* Launch Screen.storyboard in Resources */,
 				2403ADE62354258C004BC262 /* logo.jpg in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,

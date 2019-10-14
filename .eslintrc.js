@@ -50,6 +50,7 @@ module.exports = {
     //////////////
     // 代码风格及规范限制.相关 //
     //////////////
+    "max-len": [1, 150],
     "quotes": [2, "single"], //单引号
     "no-console": 0,         //不禁用console
     "no-debugger": 2,        //禁用debugger
