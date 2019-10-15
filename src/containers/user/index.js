@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import Wrapper from '../../components/common/wrapper'
 import Header from '../../components/header'
 import TabIcon from '../../components/common/TabIcon'
