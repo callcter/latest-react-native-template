@@ -1,5 +1,5 @@
 import React from 'react';
-import Iconfont from './index';
+import Iconfont from './iconfont';
 
 // 规范字体图标的size、宽高、行高，方便对齐
 
