@@ -6,9 +6,7 @@ import DeviceInfo from 'react-native-device-info'
  */
 const checkIfUpdated = async (saveNewVersion) => {
   const _saveVersion = saveNewVersion || false
-  const _deviceVersion = await DeviceInfo.getBuildNumber()
-    .then((buildNumber) => (buildNumber))
-    .catch(() => 0)
+  const _deviceVersion = DeviceInfo.getBuildNumber()
   const _key = 'appVersion'
   let _result = false
   await storage.load({
