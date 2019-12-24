@@ -24,12 +24,15 @@ async function requestPermission() {
 }
 
 class AppWithNavigationState extends React.Component {
+  constructor(props){
+    super(props)
+    this.unsubscribe = NetInfo.addEventListener(state => this.handleFirstConnectivityChange(state))
+  }
   async componentDidMount() {
     if (!Adapter.isIOS) {
       BackHandler.addEventListener('hardwareBackPress', this.onBackPress)
       await requestPermission()
     }
-    NetInfo.addEventListener('connectionChange', this.handleFirstConnectivityChange)
   }
 
   componentWillUnmount() {
@@ -37,6 +40,7 @@ class AppWithNavigationState extends React.Component {
       BackHandler.removeEventListener('hardwareBackPress', this.onBackPress)
     }
     NetInfo.removeEventListener('connectionChange')
+    this.unsubscribe()
   }
 
   onBackPress = () => {
@@ -59,8 +63,8 @@ class AppWithNavigationState extends React.Component {
     return true
   }
 
-  handleFirstConnectivityChange = (connectionInfo) => {
-    if (connectionInfo.type.toLowerCase() === 'none') {
+  handleFirstConnectivityChange = (state) => {
+    if (state.type.toLowerCase() === 'none') {
       _log('断网')
       // todo 确定断网处理页面
       // this.props.dispatch(NavigationActions.navigate(''))
