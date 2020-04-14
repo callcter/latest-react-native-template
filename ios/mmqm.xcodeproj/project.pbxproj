@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		20F0CDF16DAD1B17B99D0493 /* libPods-mmqm-mmqmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F12B08A10634E5439FBE859E /* libPods-mmqm-mmqmTests.a */; };
 		2403ADE62354258C004BC262 /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2403ADE52354258C004BC262 /* logo.jpg */; };
 		24230673235401AA00245B20 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24230672235401AA00245B20 /* Launch Screen.storyboard */; };
 		24A03B4023929345006372D4 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 24A03B3F23929345006372D4 /* iconfont.ttf */; };
@@ -18,7 +19,6 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* mmqmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mmqmTests.m */; };
-		71EBC9941BCAD71886C25212 /* libPods-mmqmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E30F7EF71B98D2601008CEE5 /* libPods-mmqmTests.a */; };
 		92A4DC89387A97CD5E2807E9 /* libPods-mmqm-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 671BF006A34FD785EA4A7657 /* libPods-mmqm-tvOSTests.a */; };
 		AAA2684AD8D8A4651A6BCFA6 /* libPods-mmqm-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CFF089A1902C8B659BA0E4 /* libPods-mmqm-tvOS.a */; };
 		BAE1DDF59359050FA2759980 /* libPods-mmqm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE99CA8F094A2C64DF221EDB /* libPods-mmqm.a */; };
@@ -64,12 +64,14 @@
 		546065F48076ACB5A2D8C5F7 /* Pods-mmqm-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm-tvOSTests/Pods-mmqm-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		671BF006A34FD785EA4A7657 /* libPods-mmqm-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mmqm-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ADFC983BB6F7C3D4A82904F /* Pods-mmqm-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm-tvOS/Pods-mmqm-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		76D50B30FBAB8454544A0B6A /* Pods-mmqm-mmqmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm-mmqmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm-mmqmTests/Pods-mmqm-mmqmTests.release.xcconfig"; sourceTree = "<group>"; };
 		8E0EC0C9274C19A260D1D481 /* Pods-mmqm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm/Pods-mmqm.debug.xcconfig"; sourceTree = "<group>"; };
 		9E9464F31E5284E609A3C62E /* Pods-mmqmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mmqmTests/Pods-mmqmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B3D0EC518EB07C5978161AEC /* Pods-mmqmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mmqmTests/Pods-mmqmTests.release.xcconfig"; sourceTree = "<group>"; };
-		E30F7EF71B98D2601008CEE5 /* libPods-mmqmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mmqmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF5DBDFE60EE089EB0CE7C8 /* Pods-mmqm-mmqmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mmqm-mmqmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mmqm-mmqmTests/Pods-mmqm-mmqmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F12B08A10634E5439FBE859E /* libPods-mmqm-mmqmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mmqm-mmqmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE99CA8F094A2C64DF221EDB /* libPods-mmqm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mmqm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EBC9941BCAD71886C25212 /* libPods-mmqmTests.a in Frameworks */,
+				20F0CDF16DAD1B17B99D0493 /* libPods-mmqm-mmqmTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +159,7 @@
 				FE99CA8F094A2C64DF221EDB /* libPods-mmqm.a */,
 				12CFF089A1902C8B659BA0E4 /* libPods-mmqm-tvOS.a */,
 				671BF006A34FD785EA4A7657 /* libPods-mmqm-tvOSTests.a */,
-				E30F7EF71B98D2601008CEE5 /* libPods-mmqmTests.a */,
+				F12B08A10634E5439FBE859E /* libPods-mmqm-mmqmTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +209,8 @@
 				3CC730E53BAB4BD356366BC9 /* Pods-mmqm-tvOSTests.release.xcconfig */,
 				9E9464F31E5284E609A3C62E /* Pods-mmqmTests.debug.xcconfig */,
 				B3D0EC518EB07C5978161AEC /* Pods-mmqmTests.release.xcconfig */,
+				CAF5DBDFE60EE089EB0CE7C8 /* Pods-mmqm-mmqmTests.debug.xcconfig */,
+				76D50B30FBAB8454544A0B6A /* Pods-mmqm-mmqmTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -222,6 +226,7 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				D8C3ADD17681BFF4F3403108 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,7 +504,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-mmqmTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-mmqm-mmqmTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,6 +527,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C3ADD17681BFF4F3403108 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mmqm-mmqmTests/Pods-mmqm-mmqmTests-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mmqm-mmqmTests/Pods-mmqm-mmqmTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -609,7 +662,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E9464F31E5284E609A3C62E /* Pods-mmqmTests.debug.xcconfig */;
+			baseConfigurationReference = CAF5DBDFE60EE089EB0CE7C8 /* Pods-mmqm-mmqmTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -632,7 +685,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3D0EC518EB07C5978161AEC /* Pods-mmqmTests.release.xcconfig */;
+			baseConfigurationReference = 76D50B30FBAB8454544A0B6A /* Pods-mmqm-mmqmTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -655,8 +708,13 @@
 			baseConfigurationReference = 8E0EC0C9274C19A260D1D481 /* Pods-mmqm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FB_SONARKIT_ENABLED=1",
+				);
 				INFOPLIST_FILE = mmqm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -803,6 +861,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -846,6 +905,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -856,6 +921,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -892,6 +958,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "/usr/lib/swift $(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

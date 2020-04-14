@@ -9,9 +9,9 @@ class LoadingScreen extends React.Component {
   async componentDidMount() {
     /* 游客模式下检查用户的登录状态 */
     this.props.loginedCheck()
-    const bootpage = await storage.load({ key: 'bootpageState' }).then((ret) => ret).catch(() => false)
+    const bootPage = await storage.load({ key: 'bootPageState' }).then((ret) => ret).catch(() => false)
     const updated = await checkIfUpdated(true)
-    const needBoot = !bootpage.bootpageOpend || updated
+    const needBoot = true || !bootPage.bootPageOpened || updated
 
     /* 游客模式 */
     if (needBoot) {

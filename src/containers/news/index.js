@@ -6,8 +6,6 @@ import {
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { TabView } from 'react-native-tab-view'
 import Wrapper from '../../components/common/wrapper'
-import Header from '../../components/header'
-import TabIcon from '../../components/common/TabIcon'
 import DataSource from './dataSource'
 import { IconBox } from '../../components/iconfont'
 import TabBar from '../../components/tabview'
@@ -133,11 +131,6 @@ export default class NewsIndex extends React.Component {
     this.setState({ index: index })
   }
 
-  static navigationOptions = {
-    title: '新闻',
-    tabBarIcon: ({ focused }) => <TabIcon name="新闻" focused={focused} />,
-  }
-
   render() {
     return (
       <Wrapper>
@@ -148,7 +141,6 @@ export default class NewsIndex extends React.Component {
           onIndexChange={this._handleIndexChange}
           initialLayout={{ width: Adapter.width, height: 0 }}
         />
-
       </Wrapper>
     );
   }

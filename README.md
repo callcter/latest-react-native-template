@@ -1,3 +1,7 @@
+# node_modules fix
+
+[react-native-snap-carousel 3.9.0 getNode() bug](https://github.com/archriss/react-native-snap-carousel/issues/672)
+
 # latest-react-native-template
 
 最新的 React Native 项目模板，当前为 0.61.2，使用组件都是最新的

@@ -26,10 +26,10 @@ export default (props) => {
   const { focused, name } = props
   let source = IconNewsNormal
   switch (name) {
-    case '新闻':
+    case 'News':
       source = focused ? IconNewsSelected : IconNewsNormal
       break
-    case '我的':
+    case 'User':
       source = focused ? IconUserSelected : IconUserNormal
       break
     default:

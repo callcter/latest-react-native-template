@@ -2,7 +2,7 @@ import React from 'react'
 import {
   View, ViewPropTypes, StatusBar, StyleSheet,
 } from 'react-native'
-import { NavigationEvents } from 'react-navigation'
+// import { NavigationEvents } from 'react-navigation'
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -32,7 +32,7 @@ export default class Wrapper extends React.Component {
   render() {
     return (
       <View style={[styles.wrapper, this.props.style]}>
-        <NavigationEvents onWillFocus={this.onPageFocus} />
+        {/* <NavigationEvents onWillFocus={this.onPageFocus} /> */}
         {this.props.children}
       </View>
     )

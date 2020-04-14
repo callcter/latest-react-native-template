@@ -8,7 +8,7 @@ import PaginationDots from '../components/carousel/paginationDots'
 const styles = StyleSheet.create({
   img: {
     width: Adapter.width,
-    height: Adapter.width1,
+    height: Adapter.width,
     marginTop: Adapter.space_l,
   },
   mainContent: {
@@ -88,9 +88,9 @@ export default class BootScreen extends React.PureComponent {
 
   async componentDidMount() {
     storage.save({
-      key: 'bootpageState',
+      key: 'bootPageState',
       data: {
-        bootpageOpend: true,
+        bootPageOpened: true,
       },
     }).catch((err) => {
       _log('eeeeeeeeeeee', err)
@@ -195,7 +195,7 @@ export default class BootScreen extends React.PureComponent {
               <TouchableOpacity
                 activeOpacity={0.8}
                 style={styles.doneBtn}
-                onPress={() => this.props.navigation.navigate('App')}
+                onPress={() => this.props.navigation.navigate('Home')}
               >
                 <Text style={styles.doneBtnText}>开始体验</Text>
               </TouchableOpacity>

@@ -4,10 +4,11 @@ import {
 } from 'react-native'
 import { Provider } from 'react-redux'
 import { MenuProvider } from 'react-native-popup-menu'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import store from './src/reducers'
 import Toast from './src/components/toast'
-import AppWithNavigationState from './src/routes/AppWithNavigationState'
 import LinkRoutes from './src/routes/linkRoutes'
+import AppNavigator from './src/routes/AppNavigator'
 
 export default class Root extends React.Component {
   async componentDidMount() {
@@ -33,11 +34,11 @@ export default class Root extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <MenuProvider>
-          {
-            <AppWithNavigationState />
-          }
-        </MenuProvider>
+        <SafeAreaProvider>
+          <MenuProvider>
+            <AppNavigator />
+          </MenuProvider>
+        </SafeAreaProvider>
         <Toast
           ref={(ref) => { this.toast = ref }}
           position="center"

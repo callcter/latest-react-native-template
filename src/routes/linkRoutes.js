@@ -1,10 +1,10 @@
-import PathParser from 'path-parser'
+import { Path } from 'path-parser'
 import store from '../reducers'
 
 const paths = [
   {
     routeName: 'Organization',
-    path: new PathParser('/organization/:code'),
+    path: new Path('/organization/:code'),
   },
 ]
 
@@ -17,7 +17,7 @@ export default (url) => {
   const pathObj = findPath(url)
   if (!pathObj) return
   let params = null
-  _log('pathparser------------------', pathObj.path.test(url))
+  _log('path-parser------------------', pathObj.path.test(url))
   switch (pathObj.routeName) {
     case 'Organization':
       params = {
